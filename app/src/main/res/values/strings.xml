@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OpenMovie</string>
+    <string name="edit_search_hint">Search movie title</string>
+    <string name="button_search_text">Search</string>
+    <string name="label_year">Year</string>
+    <string name="label_runtime">Runtime</string>
+    <string name="label_director">Director</string>
+</resources>
