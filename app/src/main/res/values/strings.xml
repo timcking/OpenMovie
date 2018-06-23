@@ -5,4 +5,5 @@
     <string name="label_year">Year</string>
     <string name="label_runtime">Runtime</string>
     <string name="label_director">Director</string>
+    <string name="search_url">http://www.omdbapi.com/?apikey=4f992b25&amp;s=</string>
 </resources>
