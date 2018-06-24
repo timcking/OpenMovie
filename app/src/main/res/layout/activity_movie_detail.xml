@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="169dp"
+        android:layout_width="154dp"
         android:layout_height="228dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -109,7 +109,7 @@
 
             <TextView
                 android:id="@+id/textDirector"
-                android:layout_width="314dp"
+                android:layout_width="283dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 tools:layout_editor_absoluteX="82dp"
@@ -131,9 +131,13 @@
 
             <TextView
                 android:id="@+id/textPlot"
-                android:layout_width="wrap_content"
+                android:layout_width="277dp"
                 android:layout_height="90dp"
-                android:paddingLeft="5dp" />
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:paddingLeft="5dp"
+                android:scrollHorizontally="false"
+                android:textAlignment="viewStart" />
         </TableRow>
 
         <TableRow
@@ -153,9 +157,11 @@
 
             <TextView
                 android:id="@+id/textCast"
-                android:layout_width="wrap_content"
+                android:layout_width="282dp"
                 android:layout_height="140dp"
                 android:paddingLeft="5dp"
+                android:scrollHorizontally="false"
+                android:textAlignment="viewStart"
                 tools:layout_editor_absoluteX="82dp"
                 tools:layout_editor_absoluteY="303dp" />
         </TableRow>
