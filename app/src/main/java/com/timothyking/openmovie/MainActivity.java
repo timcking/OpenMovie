@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
         editSearch = findViewById(R.id.editSearch);
         String strSearch =  (editSearch.getText().toString());
 
+        // Replace spaces with + for search
+        strSearch = strSearch.replaceAll(" ", "+");
+
         // Using string resource
         String myURL = getString(R.string.search_url) + "s=" + strSearch;
 
@@ -126,6 +129,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
+
+            if (result == null) {
+                Toast.makeText(MainActivity.this, "Not found, try another movie title", Toast.LENGTH_LONG).show();
+                return;
+            }
             ArrayList<String> labelList = new ArrayList<String>();
             // Create ArrayAdapter using the label list
             ListAdapter listAdapter = new ArrayAdapter<String>(MainActivity.this,

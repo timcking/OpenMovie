@@ -77,7 +77,6 @@ public class MovieDetail extends AppCompatActivity {
                 while((line = reader.readLine()) != null) {
                     result.append(line);
                 }
-
                 return result.toString();
 
             } catch (MalformedURLException e) {
@@ -112,7 +111,7 @@ public class MovieDetail extends AppCompatActivity {
 
             } catch(JSONException e) {
                 Toast.makeText(MovieDetail.this, "Not found, try another movie title", Toast.LENGTH_LONG).show();
-                Log.e(TAG, "error while fetching weather info", e);
+                Log.e(TAG, "error while fetching movie info", e);
             }
         }
     }
