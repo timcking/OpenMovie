@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.text.method.ScrollingMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,13 +46,23 @@ public class MovieDetail extends AppCompatActivity {
         textDirector = findViewById(R.id.textDirector);
         textRuntime = findViewById(R.id.textRuntime);
         textPlot = findViewById(R.id.textPlot);
+        // Make plot scrollable
+        textPlot.setMovementMethod(new ScrollingMovementMethod());
         textCast = findViewById(R.id.textCast);
 
         Intent intent = getIntent();
         ArrayList<String> message = (ArrayList<String>) intent.getSerializableExtra(MainActivity.EXTRA_MESSAGE);
 
-        textTitle.setText(message.get(0));
-        movieID = (message.get(1));
+        movieID = message.get(1);
+
+        // Set clickable link for IMDB
+        String imdb_url = "http://www.imdb.com/title/" + movieID;
+        String title = message.get(0);
+        String linkText = "<a href=\"" + imdb_url + "\">" + title + "</a>";
+        textTitle.setText(Html.fromHtml(linkText));
+        Linkify.addLinks(textTitle, Linkify.ALL);
+        textTitle.setMovementMethod(LinkMovementMethod.getInstance());
+
         Picasso.get().load(message.get(2)).into(imagePoster);
         textYear.setText(message.get(3));
 

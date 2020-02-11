@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Not found, try another movie title", Toast.LENGTH_LONG).show();
                 return;
             }
+
             ArrayList<String> labelList = new ArrayList<String>();
             // Create ArrayAdapter using the label list
             ListAdapter listAdapter = new ArrayAdapter<String>(MainActivity.this,

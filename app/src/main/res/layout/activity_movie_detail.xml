@@ -18,6 +18,7 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="italic"
+        android:linksClickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,6 +135,7 @@
                 android:layout_width="277dp"
                 android:layout_height="90dp"
                 android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:minLines="2"
                 android:paddingLeft="5dp"
                 android:scrollHorizontally="false"
